@@ -19,6 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', [PostController::class, 'index']);
+
+/* index page */
+Route::get("/posts/{id}/tasks",[PostController::class,"index"])->name("posts.index");
+
+/* tasks new create page */
+Route::get('/posts/{id}/tasks/create', [PostController::class,"showCreateForm"])->name('posts.create');
+Route::post('/posts/{id}/tasks/create', [PostController::class,"create"]);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
