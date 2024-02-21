@@ -4,7 +4,6 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use Illuminate\View\View;
-use App\Http\Controllers\TaskController;
 
 class GuestLayout extends Component
 {
