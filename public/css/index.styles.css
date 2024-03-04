@@ -1,0 +1,125 @@
+/* style.css */
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* 中央揃え */
+    margin: 0 auto; /* 中央寄せ */
+    max-width: 30%; /* 最大幅を調整 */
+    padding: 1rem;
+    border-radius: 70px;
+    margin-bottom: 0.5rem;
+    margin-top: 30px; /* 任意の値を指定 */
+}
+
+/* ボタンのスタイル */
+.button-create {
+    background-color: #ab47bc;
+    color: white;
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Noto Sans JP', sans-serif; /* Google Fontsから読み込んだフォントを指定 */
+}
+
+.button-create:hover {
+    background-color: #8e24aa;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* ポストのカードスタイル */
+.post-card {
+    border: 2px solid #ec407a;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* index.styles.css */
+
+.button-completed button{
+    background-color: #ab47bc;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 0.7rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-incomplete button:hover {
+    background-color: #8e24aa;
+}
+
+.button-incomplete button{
+    background-color: #e0e0e0; /* ご希望の色に変更してください */
+    color: #757575; /* 文字色を変更 */
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 0.7rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+/* deleteボタンのスタイル */
+.button-delete {
+    background-color: #fff; /* 白色の背景 */
+    color: #ab47bc; /* テキストの色 */
+    padding: 0.5rem 1.0rem;
+    font-size: 0.8rem;
+    border: 2px solid #ab47bc; /* ボーダーの色 */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.button-delete:hover {
+    background-color: #ab47bc;
+    color: #fff;
+}
+
+
+/* タイトルとカテゴリへのリンクのスタイル */
+.title a, .category-link {
+    color: #ab47bc;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.title a:hover, .category-link:hover {
+    color: #8e24aa;
+}
+
+/* 本文のスタイル */
+.body {
+    color: #757575;
+}
+/* Flexbox を使用して ToDo を横並びにするスタイル */
+.posts {
+    display: flex;
+    flex-wrap: wrap; /* 横に並びきれない場合は折り返す */
+}
+
+.py-12 {
+    flex: 1; /* 各 ToDo を均等に幅を分ける */
+    max-width: calc(33.333% - 1rem); /* 幅を調整（例: 3つ横並びの場合） */
+    margin-right: 1rem; /* ToDo の間隔 */
+    margin-bottom: 1rem; /* 下部の間隔 */
+}

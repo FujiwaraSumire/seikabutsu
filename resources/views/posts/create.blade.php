@@ -1,6 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        　To Do リスト
+        <link rel="stylesheet" href="{{ asset('css/create.styles.css') }}">
+        TO DO リスト
     </x-slot>
         <h1>To Do</h1>
         <form action="/posts" method="POST">
