@@ -22,6 +22,16 @@ class Post extends Model
     ];
     
     
+    public function complete()
+        {
+        $this->update(['check' => 1]);
+        }
+
+    public function incomplete()
+        {
+        $this->update(['check' => 0]);
+        }
+    
     // updated_atで降順に並べたあと、limitで件数制限をかける
     function getPaginateByLimit(int $limit_count = 5)
     

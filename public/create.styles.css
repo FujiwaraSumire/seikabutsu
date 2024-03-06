@@ -1,0 +1,102 @@
+/* style.css */
+
+/* ページ全体のスタイル */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fbede1;
+    color: #6a1b9a;
+}
+
+/* ヘッダーセクション */
+header {
+    text-align: center;
+    background-color: #8e24aa;
+    color: white;
+    padding: 1rem;
+}
+
+/* フォーム全体のスタイル */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* タイトルのスタイル */
+h1 {
+    font-size: 2rem;
+    color: #8e24aa;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* フォーム内の要素のスタイル */
+h2 {
+    font-size: 1.5rem;
+    color: #8e24aa;
+    margin-top: 1.5rem;
+}
+
+input[type="text"],
+select,
+textarea,
+input[type="datetime-local"],
+input[type="submit"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #8e24aa;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+select {
+    appearance: none;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #8e24aa;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #ec407a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #d81b60;
+}
+
+/* エラーメッセージのスタイル */
+.title__error,
+.body__error {
+    margin-top: 0.5rem;
+}
+
+/* リンクのスタイル */
+.back a {
+    color: #8e24aa;
+    text-decoration: none;
+}
+
+.back a:hover {
+    text-decoration: underline;
+}
+
+/* ページ全体のスタイル */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fbede1;
+    color: #6a1b9a;
+}

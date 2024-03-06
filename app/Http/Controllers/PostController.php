@@ -18,6 +18,18 @@ class PostController extends Controller
        //blade内で使う変数'posts'と設定。'posts'の中身にgetを使い、インスタンス化した$postを代入。
    }
    
+    public function completed(Post $post)
+   {
+    $post->complete();
+    return redirect('/');
+   }
+   
+    public function Incomplete(Post $post)
+   {
+    $post->incomplete();
+    return redirect('/');
+   }
+   
     public function show(Post $post)
    {
     return view('posts.show')->with(['post' => $post]);
@@ -56,5 +68,7 @@ class PostController extends Controller
    {
     return view('posts.create')->with(['categories' => $category->get(),'priorities' => $priority->get()]);
    }
+   
+   
    
 }

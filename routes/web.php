@@ -19,6 +19,8 @@ Route::controller(PostController::class)->middleware(['auth'])->group(function()
     Route::put('/posts/{post}', 'update')->name('update');
     Route::delete('/posts/{post}', 'delete')->name('delete');
     Route::get('/posts/{post}/edit', 'edit')->name('edit');
+    Route::patch('/posts/{post}/completed','completed')->name('completed');
+    Route::patch('/posts/{post}/incomplete','incomplete')->name('incomplete');
 });
 
 Route::get('/categories/{category}', [CategoryController::class,'index'])->middleware("auth");

@@ -4,8 +4,10 @@
     </x-slot>
         <div class="content">
             <div class="content__post">
+                <div class="bg-sky-600">
                 <h3>TO DO</h3>
-                <p>{{ $post->body }}</p>    
+                <p>{{ $post->body }}</p> 
+                </div>
             </div>
              <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         </div>
