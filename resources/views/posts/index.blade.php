@@ -1,6 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <link rel="stylesheet" href="{{ asset('css/index.styles.css') }}">
+        <!-- public/css/index.css を読み込む -->
+        <link rel="stylesheet" href="{{ asset('css/index.css') }}">    
         TO DO リスト
     </x-slot>
         <div class="header-content">
