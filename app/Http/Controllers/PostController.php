@@ -55,7 +55,7 @@ class PostController extends Controller
     $input = $request->input('post');
 
     // 新しいカテゴリーの場合
-    if ($request->has('post.new_category')) {
+    if ($request->has('post.new_category') && $input['new_category'] !=null) {
         $newCategory = Category::create([
             'name' => $input['new_category'], 
             'user_id' => auth()->id(),
@@ -77,7 +77,7 @@ class PostController extends Controller
     $input['category_id'] = $categoryId;
     
     $input['priority_id'] = $request->input('post.priority_id');
-
+    //$input['priority_id'] = $request['priority_id'];
     $post->fill($input)->save();
 
     return redirect('/posts/' . $post->id);

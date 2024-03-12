@@ -9,7 +9,9 @@
                 <p>{{ $post->body }}</p> 
                 </div>
             </div>
+            @if(!empty($post->category->id ))
              <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+            @endif
         </div>
         <div class="edit">
             <a href="/posts/{{ $post->id }}/edit">edit</a>
