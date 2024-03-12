@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('title', 50);
             $table->string('body', 200)->nullable();
             $table->boolean('check');
-            $table->foreignId('category_id')->constrained()->onDelete('cascade')->nullable();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade')->nullable();
-            $table->foreignId('priority_id')->constrained()->onDelete('cascade')->nullable();
+            $table->foreignId('category_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('priority_id')->nullable()->constrained()->onDelete('cascade');
             $table->dateTime('deadline')->nullable();
             $table->softDeletes();
             $table->timestamps();

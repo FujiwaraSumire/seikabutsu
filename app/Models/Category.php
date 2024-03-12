@@ -26,7 +26,7 @@ class Category extends Model
     
     public function getByCategory(int $limit_count = 5)
     {
-        return $this->posts()->with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
+        return $this->posts()->orderBy('updated_at', 'DESC')->paginate($limit_count);
     }
     
     // Userに対するリレーション

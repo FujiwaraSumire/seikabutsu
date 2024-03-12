@@ -34,10 +34,14 @@
                                 <div class="extra-space"></div> 
                                 <h2 class="title"><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h2>
                                 <p class="body">{{ $post->body }}</p>
-                                <div class="extra-space"></div> 
-                                <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
-                                <div class="extra-space"></div> 
-                                <a href="/priorities/{{ $post->priority->id }}">{{ $post->priority->name }}</a>
+                                @if(!empty($post->category->id ))
+                                    <div class="extra-space"></div> 
+                                    <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
+                                @endif
+                                @if(!empty($post->priority->id ))
+                                    <div class="extra-space"></div> 
+                                    <a href="/priorities/{{ $post->priority->id }}">{{ $post->priority->name }}</a>
+                                @endif
                                 <div class="extra-space"></div> <!-- 追加: 余白を作成 -->
                                 <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                                     @csrf

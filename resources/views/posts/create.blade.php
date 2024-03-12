@@ -24,7 +24,7 @@
 
                 <!-- カテゴリーの選択フォーム -->
             <div>
-                <select id="categorySelect" name="post[category_id]" placeholder="カテゴリーを選択">
+                <select id="categorySelect" name="post[category_id]">
                     <option value="">選択してください</option>
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>

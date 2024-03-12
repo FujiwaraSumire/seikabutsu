@@ -55,8 +55,8 @@ class PostController extends Controller
     $input = $request->input('post');
 
     // 新しいカテゴリーの場合
-    if ($request->has('post.new_category')) {
-        $newCategory = Category::create([
+    if ($request->has('post.new_category') && $input['new_category'] !=null) {
+       $newCategory = Category::create([
             'name' => $input['new_category'], 
             'user_id' => auth()->id(),
         ]);
