@@ -8,13 +8,14 @@
         <button class="button-create" onclick="location.href='/posts/create'"> To Do Create</button>
     </div>
 
-    <div class='posts'>
+    <div class="post">
         @foreach ($posts as $post)
             <div class="py-12">
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                         <div class="p-6 text-gray-900">
-                            <div class='post'>
+                            <div class="post">
+                                <p class="text">
                                 @if($post->check == 1)
                                     <form action="{{ route('incomplete', ['post' => $post->id]) }}" 
                                         method="POST" class="button-incomplete">
@@ -30,14 +31,20 @@
                                         <button type="button" onclick="confirmAction(this, 'Completed✨に変更しますか？')">Incomplete</button>
                                     </form>
                                 @endif
-                                <h2 class='title'><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h2>
+                                <div class="extra-space"></div> 
+                                <h2 class="title"><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h2>
+                                <p class="body">{{ $post->body }}</p>
+                                <div class="extra-space"></div> 
                                 <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
-                                <p class='body'>{{ $post->body }}</p>
+                                <div class="extra-space"></div> 
+                                <a href="/priorities/{{ $post->priority->id }}">{{ $post->priority->name }}</a>
+                                <div class="extra-space"></div> <!-- 追加: 余白を作成 -->
                                 <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="button" class="button-delete" onclick="deletePost({{ $post->id }})">delete</button> 
                                 </form>
+                                </p>
                             </div>
                         </div>
                     </div>
