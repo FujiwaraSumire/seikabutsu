@@ -55,8 +55,10 @@
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin-right: 0.7rem;
+    margin-right: 0.5rem;
     transition: background-color 0.3s ease-in-out;
+    display: block; /* ボタンをブロック要素に変更 */
+    margin: 0 auto; /* 左右のマージンを自動で設定し、中央に配置 */
 }
 
 .button-incomplete button:hover {
@@ -71,8 +73,10 @@
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin-right: 0.7rem;
+    margin-right: 0.5rem;
     transition: background-color 0.3s ease-in-out;
+    display: block; /* ボタンをブロック要素に変更 */
+    margin: 0 auto; /* 左右のマージンを自動で設定し、中央に配置 */
 }
 
 
@@ -87,6 +91,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: block; /* ボタンをブロック要素に変更 */
+    margin-left: auto; /* テキストを右端に寄せる */
 }
 
 
@@ -111,10 +117,21 @@
 .body {
     color: #757575;
 }
+/* 親要素のスタイル */
 /* Flexbox を使用して ToDo を横並びにするスタイル */
-.posts {
-    display: flex;
+
+.post {
+    display:  block;
     flex-wrap: wrap; /* 横に並びきれない場合は折り返す */
+    text-align: center; /* テキストを左揃え */
+    margin: 0 auto; /* 左右のマージンを自動で設定し、中央に配置 */
+    justify-content: center; /* 子要素を中央に配置 */
+}
+
+/* 子要素のスタイル */
+.post .text {
+    display: inline-block; /* インラインブロックに変更して左揃え */
+    text-align: left; /* テキストを左揃え */
 }
 
 .py-12 {
@@ -122,4 +139,10 @@
     max-width: calc(33.333% - 1rem); /* 幅を調整（例: 3つ横並びの場合） */
     margin-right: 1rem; /* ToDo の間隔 */
     margin-bottom: 1rem; /* 下部の間隔 */
+    width: 100%; 
+    display: inline-block; 
+}
+
+.extra-space {
+    margin-bottom: 30px; /* 適切な余白のサイズを設定 */
 }

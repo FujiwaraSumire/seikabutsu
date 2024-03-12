@@ -9,6 +9,10 @@ class Priority extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+    'name',
+    ];
+    
     // Postに対するリレーション
 
     //「1対多」の関係なので'posts'と複数形に

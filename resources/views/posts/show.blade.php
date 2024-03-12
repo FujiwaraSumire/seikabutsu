@@ -6,8 +6,7 @@
             <div class="content__post">
                 <div class="bg-sky-600">
                 <h3>TO DO</h3>
-                <p>{{ $post->body }}</p> 
-                </div>
+                <p>{{ $post->body }}</p>    
             </div>
              <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
         </div>

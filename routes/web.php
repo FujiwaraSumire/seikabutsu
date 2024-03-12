@@ -13,7 +13,7 @@ Route::get('/dashboard', function () {
 
 Route::controller(PostController::class)->middleware(['auth'])->group(function(){
     Route::get('/', 'index')->name('index');
-    Route::post('/posts', 'store')->name('store');
+    Route::post('/posts', 'store')->name('post.store');
     Route::get('/posts/create', 'create')->name('create');
     Route::get('/posts/{post}', 'show')->name('show');
     Route::put('/posts/{post}', 'update')->name('update');
@@ -25,6 +25,15 @@ Route::controller(PostController::class)->middleware(['auth'])->group(function()
 
 Route::get('/categories/{category}', [CategoryController::class,'index'])->middleware("auth");
 
+Route::controller(CategoryController::class)->middleware(['auth'])->group(function(){
+    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+    Route::post('/categories', 'store')->name('store');
+    Route::get('/categories/create', 'create')->name('create');
+    Route::get('/categories/{category}', 'show')->name('show');
+    Route::put('/categories/{category}', 'update')->name('update');
+    Route::get('/categories/{category}/edit', 'edit')->name('edit');
+});
+    
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

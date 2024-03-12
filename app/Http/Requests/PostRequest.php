@@ -25,8 +25,28 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-        'post.title' => 'required|string|max:100',
-            'post.body' => 'required|string|max:4000',
+            'post.title' => 'required|max:50',
+            'post.body' => 'nullable|max:200',
+            'post.category_id' => 'nullable',
+            'post.priority_id' => 'nullable',
+            'post.deadline' => 'nullable|date',
+            
+        ];
+    }
+
+    /**
+     * Get the validation attributes that apply to the request.
+     *
+     * @return array<string, mixed>
+     */
+    public function attributes()
+    {
+        return [
+            'post.title' => 'Title',
+            'post.body' => 'To Do details',
+            'post.category_id' => 'Category',
+            'post.priority_id' => 'Priority',
+            'post.deadline' => 'Deadline'
         ];
     }
 }

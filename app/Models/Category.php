@@ -10,6 +10,11 @@ class Category extends Model
 {
     use SoftDeletes;
     use HasFactory;
+    
+    protected $fillable = [
+    'name',
+    'user_id',
+    ];
       
     // Postに対するリレーション
 
