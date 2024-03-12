@@ -2,12 +2,8 @@
     <x-slot name="header">
         　TO DO リスト
     </x-slot>
-        <h1>To Do</h1>
-        <a href='/posts/create'>create</a>
-        <div class='categories'>
-        @foreach ($categories as $category)
-            <a href="{{ route('categories.show', $category) }}">{{ $category->name }}</a>
-        @endforeach
+        <div class="header-content">
+            <button class="header-button" onclick="location.href='/posts/create'">Create</button>
         </div>
         <div class='posts'>
             @foreach ($posts as $post)
