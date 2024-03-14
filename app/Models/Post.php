@@ -5,22 +5,31 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Carbon\Carbon;
+use Kyslik\ColumnSortable\Sortable;
 
 class Post extends Model
 {
     use SoftDeletes;
     use HasFactory;
+    use Sortable;
     
     protected $fillable = [
-    'title',
-    'body',
-    'category_id',
-    'check',
-    'user_id',
-    'deadline',
-    'priority_id'
+        'title',
+        'body',
+        'category_id',
+        'check',
+        'user_id',
+        'deadline',
+        'priority_id'
     ];
     
+    public $sortable = [
+        'category_id',
+        'prriority_id',
+        'deadline'
+        // 追加のソート可能なカラムをここに追加します
+    ];
     
     public function complete()
         {
@@ -39,6 +48,12 @@ class Post extends Model
         return $this::with('category')->orderBy('updated_at', 'DESC')->paginate($limit_count);
         }
     
+    public function getFormattedDueDateAttribute()
+        {
+    return Carbon::createFromFormat('Y-m-d', $this->attributes['deadline'])
+        ->format('Y/m/d');
+        }
+       
     // Categoryに対するリレーション
 
     //「1対多」の関係なので単数系に

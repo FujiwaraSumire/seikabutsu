@@ -1,6 +1,12 @@
-/* create.css */
+/* edit.css */
 
-.create {
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.edit {
     background: #AAC4FF;
     box-shadow: 0px 0px 0px 5px #AAC4FF;
     border: dashed 2px white;
@@ -13,23 +19,13 @@
     margin: 0.2em auto 2em; /* 下部の余白を追加,中央寄せ*/
 }
 
-/* ページ全体のスタイル */
 
-body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: #AAC4FF;
-    color: #757575;
-    margin: 0;
-}
-
-/* フォーム全体のスタイル */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.content__title h2,
+.content__body h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #AAC4FF; /* タイトルカラー - ブルー */
 }
 
 h1 {
@@ -42,23 +38,19 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    color: #AAC4FF;
-    text-align: left;
-    margin-top: 0.3rem; 
-    margin-bottom: 0.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #AAC4FF; /* タイトルカラー - ブルー */
 }
 
-input[type="text"],
-textarea,
-input[type="datetime-local"],
-input[type="submit"] {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid #AAC4FF;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #757575;;
+/* フォーム全体のスタイル */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 select {
@@ -74,8 +66,27 @@ select {
     cursor: pointer;
 }
 
+input,
 textarea {
-    resize: vertical;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #64b5f6; /* ボーダーカラー - ブルー */
+    border-radius: 0.25rem;
+}
+
+input[type="submit"],
+input[type="text"],
+textarea,
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #AAC4FF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #757575;;
 }
 
 input[type="submit"] {
@@ -86,13 +97,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #7892c2;
-}
-
-/* エラーメッセージのスタイル */
-.title__error {
-    margin-top: 0.5rem;
-    color: #AAC4FF;
+    background-color: #7892c2; /* ホバーエフェクト時の色 - ブルー */
 }
 
 .back {
@@ -108,8 +113,3 @@ input[type="submit"]:hover {
 .back a:hover {
     text-decoration: underline;
 }
-
-.extra-space {
-    margin-bottom: 30px;
-}
-

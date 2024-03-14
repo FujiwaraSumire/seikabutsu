@@ -1,12 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
-        　TO DO リスト
+        <h1 class="mt-2">TO DO リスト</h>
     </x-slot>
-        @extends('layouts.app')
-        
-        @section('content')
+        <div class="container">
             <h1>To-Do List for {{ $category->name }}</h1>
-        
+    
             @foreach ($posts as $post)
                 <div>
                     <h2>{{ $post->title }}</h2>
@@ -14,7 +12,7 @@
                     <!-- 他の情報を表示... -->
                 </div>
             @endforeach
-        
+            
             {{ $posts->links() }} <!-- ページネーションのためのリンク -->
-        @endsection
+        </div>
 </x-app-layout>
