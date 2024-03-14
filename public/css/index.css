@@ -1,42 +1,47 @@
-/* style.css */
+/* index.css */
 
 .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* 中央揃え */
-    margin: 0 auto; /* 中央寄せ */
-    max-width: 30%; /* 最大幅を調整 */
+    text-align: center;
+    margin: 0 auto;
+    max-width: 30%;
     padding: 1rem;
     border-radius: 70px;
     margin-bottom: 0.5rem;
-    margin-top: 30px; /* 任意の値を指定 */
+    margin-top: 30px;
 }
 
-/* ボタンのスタイル */
+h1 {
+    font-size: 2rem;
+    color: #AAC4FF;
+    text-align: left;
+    margin-top: 0.3rem; 
+    margin-bottom: 0.3rem;
+}
+
 .button-create {
-    background-color: #ab47bc;
+    background-color: #AAC4FF;
     color: white;
-    padding: 1.5rem 3rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     border: none;
-    border-radius: 30px;
-    font-size: 2rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold; /* 太字 */
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Noto Sans JP', sans-serif; /* Google Fontsから読み込んだフォントを指定 */
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .button-create:hover {
-    background-color: #8e24aa;
+    background-color: #7892c2;
     transform: scale(1.1);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* ポストのカードスタイル */
 .post-card {
     border: 2px solid #ec407a;
     border-radius: 15px;
@@ -45,10 +50,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* index.styles.css */
-
-.button-completed button{
-    background-color: #ab47bc;
+.button-completed button,
+.button-incomplete button {
+    background-color: #AAC4FF;
     color: white;
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
@@ -57,92 +61,149 @@
     cursor: pointer;
     margin-right: 0.5rem;
     transition: background-color 0.3s ease-in-out;
-    display: block; /* ボタンをブロック要素に変更 */
-    margin: 0 auto; /* 左右のマージンを自動で設定し、中央に配置 */
+    display: block;
+    margin: 0 auto;
 }
 
+.button-completed button:hover,
 .button-incomplete button:hover {
-    background-color: #8e24aa;
+    background-color: #7892c2;
 }
 
-.button-incomplete button{
-    background-color: #e0e0e0; /* ご希望の色に変更してください */
-    color: #757575; /* 文字色を変更 */
-    padding: 0.7rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-right: 0.5rem;
-    transition: background-color 0.3s ease-in-out;
-    display: block; /* ボタンをブロック要素に変更 */
-    margin: 0 auto; /* 左右のマージンを自動で設定し、中央に配置 */
+.button-incomplete button {
+    background-color: #e0e0e0;
+    color: #757575;
 }
 
+.button-delete-form {
+    display: inline-block; 
+    text-align: center; 
+}
 
-
-/* deleteボタンのスタイル */
 .button-delete {
-    background-color: #fff; /* 白色の背景 */
-    color: #ab47bc; /* テキストの色 */
+    background-color: #AAC4FF;
+    color: white;
     padding: 0.5rem 1.0rem;
     font-size: 0.8rem;
-    border: 2px solid #ab47bc; /* ボーダーの色 */
+    border: 2px solid #AAC4FF;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    display: block; /* ボタンをブロック要素に変更 */
-    margin-left: auto; /* テキストを右端に寄せる */
+    display: block;
+    display: inline-block;
 }
 
-
 .button-delete:hover {
-    background-color: #ab47bc;
+    background-color: #7892c2;
     color: #fff;
 }
 
-
-/* タイトルとカテゴリへのリンクのスタイル */
-.title a, .category-link {
-    color: #ab47bc;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+.button-edit-form {
+    display: inline-block; 
+    text-align: center; 
 }
 
-.title a:hover, .category-link:hover {
-    color: #8e24aa;
+.button-edit {
+    background-color: #AAC4FF;
+    color: white;
+    padding: 0.5rem 1.0rem;
+    font-size: 0.8rem;
+    border: 2px solid #AAC4FF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: block;
+    display: inline-block;
 }
 
-/* 本文のスタイル */
+.button-edit:hover {
+    background-color: #7892c2;
+    color: #fff;
+}
+
+/* タイトルへのリンクスタイル */
+.task-link {
+    color: #757575; /* リンクの色 */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-weight: bold; /* 太字 */
+    font-size: 1rem;
+}
+
+.task-link:hover {
+    color: #555; /* ホバー時のカラー */
+}
+
+/* カテゴリへのリンクスタイル */
+.category {
+    color: #757575; /* リンクの色 */
+    font-size: 1rem;
+}
+
+/* プライオリティへのリンクスタイル */
+.priority {
+    color: #FB88B4; /* リンクの色 */
+    font-size: 1rem;
+}
+/* ボディテキストスタイル */
 .body {
+    font-size: 1rem;
+    color: #757575; /* テキストの色 */
+}
+
+/* デッドラインのテキストスタイル */
+.deadline {
+    font-size: 1rem;
+    color: #757575; 
+}
+
+/* ベースのカラースタイル */
+.element {
     color: #757575;
 }
-/* 親要素のスタイル */
-/* Flexbox を使用して ToDo を横並びにするスタイル */
 
 .post {
-    display:  block;
-    flex-wrap: wrap; /* 横に並びきれない場合は折り返す */
-    text-align: center; /* テキストを左揃え */
-    margin: 0 auto; /* 左右のマージンを自動で設定し、中央に配置 */
-    justify-content: center; /* 子要素を中央に配置 */
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: white; 
+    text-decoration: none;
 }
 
-/* 子要素のスタイル */
-.post .text {
-    display: inline-block; /* インラインブロックに変更して左揃え */
-    text-align: left; /* テキストを左揃え */
+.post th,
+.post td {
+    border-bottom: 1px solid #757575; /* 横線のみ */
+    padding: 8px;
 }
 
-.py-12 {
-    flex: 1; /* 各 ToDo を均等に幅を分ける */
-    max-width: calc(33.333% - 1rem); /* 幅を調整（例: 3つ横並びの場合） */
-    margin-right: 1rem; /* ToDo の間隔 */
-    margin-bottom: 1rem; /* 下部の間隔 */
-    width: 100%; 
-    display: inline-block; 
+.post th {
+    background-color: #AAC4FF;
+    color: white;
+    border-top: 1px solid #757575; /* 横線のみ */
+}
+
+.post th:first-child,
+.post td:first-child {
+    border-left: 1px solid #757575; /* 左端の横線のみ */
+}
+
+.post th:last-child,
+.post td:last-child {
+    border-right: 1px solid #757575; /* 右端の横線のみ */
 }
 
 .extra-space {
-    margin-bottom: 30px; /* 適切な余白のサイズを設定 */
+    margin-bottom: 30px;
+}
+
+.task {
+    background: #AAC4FF;
+    box-shadow: 0px 0px 0px 5px #AAC4FF;
+    border: dashed 2px white;
+    padding: 0.5em 2.0em; /* 下部の余白を追加 */
+    width: 200px;
+    text-align: center; /* 文字を中央寄せにする */
+    font-weight: bold; /* 太字 */
+    color: white; /* 文字の色を白にする */
+    margin: 1em auto 2em; /* 下部の余白を追加,中央寄せ*/
 }

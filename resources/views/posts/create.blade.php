@@ -2,15 +2,16 @@
     <x-slot name="header">
        <!-- public/css/create.css を読み込む -->
         <link rel="stylesheet" href="{{ asset('css/create.css') }}">   
-        TO DO リスト
+        <h1 class="mt-2">TO DO リスト</h1>
     </x-slot>
-        <h1>To Do</h1>
+      <div class="extra-space"></div> 
         <form action="{{ route('post.store') }}" method="POST">
             @csrf
+            <div class="create">Create</div>
             <div class="title">
                 <h2>Title</h2>
                 <input type="text" name="post[title]" placeholder="タイトル" value="{{ old('post.title') }}"/>
-                <p class="title__error" style="color:red">{{ $errors->first('post.title') }}</p>
+                <p class="title__error" style="color:#AAC4FF">{{ $errors->first('post.title') }}</p>
             </div>
              <div class="body">
                 <h2>To Do details</h2>
@@ -40,12 +41,10 @@
                 </select>
             <div class="time class">
                 <h2>Deadline</h2>
-                <input type="datetime-local" name="post[deadline]"/>
+                <input type="datetime-local" name="post[deadline]">
             </div>
 
-            <input type="submit" value="作成"/>
+                <input type="submit" value="作成"/>
+            <div class="back"><a href="/">戻る</a></div>
         </form>
-        <div class="back">[<a href="/">戻る</a>]</div>
-        <div class="category">
-        </div>
 </x-app-layout>
