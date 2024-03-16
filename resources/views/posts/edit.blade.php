@@ -50,7 +50,6 @@
                 <h2>Deadline</h2>
                 <input type="datetime-local" name="post[deadline]">
             </div>
-
             <input type="submit" value="保存">
             <div class="back"><a href="/">戻る</a></div>
         </form>
