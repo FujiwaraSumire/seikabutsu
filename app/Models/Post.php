@@ -14,6 +14,44 @@ class Post extends Model
     use HasFactory;
     use Sortable;
     
+    public static function groupByAttributes()
+    {
+    $completedTasks = static::where('check', 1)
+        ->orderByRaw('ISNULL(priority_id), priority_id ASC')
+        ->orderByRaw('ISNULL(deadline), deadline ASC')
+        ->get()
+        ->groupBy(['category_id', 'priority_id']);
+
+    $incompleteTasks = static::where('check', 0)
+        ->orderByRaw('ISNULL(priority_id), priority_id ASC')
+        ->orderByRaw('ISNULL(deadline), deadline ASC')
+        ->get()
+        ->groupBy(['category_id', 'priority_id']);
+
+    $groupedTasks = [];
+
+    foreach ($completedTasks as $category => $priorityGroup) {
+        foreach ($priorityGroup as $priority => $posts) {
+            $groupedTasks[$category][$priority] = $posts;
+        }
+    }
+
+    foreach ($incompleteTasks as $category => $priorityGroup) {
+        foreach ($priorityGroup as $priority => $posts) {
+            if (!isset($groupedTasks[$category][$priority])) {
+                $groupedTasks[$category][$priority] = $posts;
+            } else {
+                foreach ($posts as $post) {
+                    $groupedTasks[$category][$priority][] = $post;
+                }
+            }
+        }
+    }
+
+    return $groupedTasks;
+    }
+
+                
     protected $fillable = [
         'title',
         'body',
