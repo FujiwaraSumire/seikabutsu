@@ -17,14 +17,14 @@ class Post extends Model
     public static function groupByAttributes()
     {
     $completedTasks = static::where('check', 1)
-        ->orderByRaw('ISNULL(priority_id), priority_id ASC')
-        ->orderByRaw('ISNULL(deadline), deadline ASC')
+        ->orderByRaw('priority_id IS NULL, priority_id ASC')
+        ->orderByRaw('deadline IS NULL, deadline ASC')
         ->get()
         ->groupBy(['category_id', 'priority_id']);
 
     $incompleteTasks = static::where('check', 0)
-        ->orderByRaw('ISNULL(priority_id), priority_id ASC')
-        ->orderByRaw('ISNULL(deadline), deadline ASC')
+        ->orderByRaw('priority_id IS NULL, priority_id ASC')
+        ->orderByRaw('deadline IS NULL, deadline ASC')
         ->get()
         ->groupBy(['category_id', 'priority_id']);
 
