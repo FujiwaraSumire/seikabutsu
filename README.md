@@ -6,7 +6,7 @@
 
 <b>テストアカウント:</b>
 - Mail: smile01183170@gmail.com
-- Password：smile19931005
+- Password: smile19931005
 
 
 <br />
@@ -50,11 +50,11 @@
 <br>
 |  posts table  |　categories table  |
 | ---- | ---- |
-| <img width="300" alt="スクリーンショット 2024-03-25 22 26 08" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d2715411-2291-483e-8b83-fccd08042632"> | <img width="300" alt="スクリーンショット 2024-03-25 22 26 47 (1)" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/0a3854b4-50b8-479e-a518-9b58a8e526e5"> |
+| <img width="400" alt="スクリーンショット 2024-03-25 22 26 08" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d2715411-2291-483e-8b83-fccd08042632"> | <img width="400" alt="スクリーンショット 2024-03-25 22 26 47 (1)" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/0a3854b4-50b8-479e-a518-9b58a8e526e5"> |
 
 |  priorities table  |　users table  |
 | ---- | ---- |
-| <img width="300" alt="スクリーンショット 2024-03-25 22 27 22" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/acd987e8-c6de-4472-87a5-a9e4b111570d"> | <img width="300" alt="スクリーンショット 2024-03-25 22 29 06" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/0efcc13b-02bd-4218-9360-5b2d4ce7c83c"> |
+| <img width="400" alt="スクリーンショット 2024-03-25 22 27 22" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/acd987e8-c6de-4472-87a5-a9e4b111570d"> | <img width="400" alt="スクリーンショット 2024-03-25 22 29 06" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/0efcc13b-02bd-4218-9360-5b2d4ce7c83c"> |
 
 <br>
 
@@ -83,8 +83,9 @@
 <br />
 
 ## 使い方
+使い方動画<br />
 
-<a href="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d988033d-6555-4a5a-be25-8e2a32aaf35a">使い方動画リンク</a><br />
+https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d988033d-6555-4a5a-be25-8e2a32aaf35a<br />
 
 <b>・タスクの作成</b><br />
 表の上にあるCreatボタンからTitle、 To Do details、 Category、 Priority、 Deadlineを記入または選択し作成。
