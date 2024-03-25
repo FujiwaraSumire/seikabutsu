@@ -3,11 +3,11 @@
 ## アプリのURL
 
 
-<a href="https://to-do-rist-c67dabfc11d8.herokuapp.com/">To Do リスト</a>
+<a href="https://to-do-rist-c67dabfc11d8.herokuapp.com/login">To Do リスト</a>
 
 <b>テストアカウント:</b>
-Mail: smile01183170@gmail.com
-Password：smile19931005
+- Mail: smile01183170@gmail.com
+- Password：smile19931005
 
 
 <br />
@@ -62,7 +62,7 @@ Password：smile19931005
 
 ## 使い方
 
-<a href="https://www.icloud.com/iclouddrive/0bbml10rEw9fnny4DOrjAbCGA#82EF150E-D04B-41AF-9BFC-001F0C86FCA4">動画リンク</a>
+<a href="https://drive.google.com/file/d/1SWbfIIraCr22hxnPpahlvUo5PXRbbrKG/view?usp=sharing">動画リンク</a>
 
 <b>・タスクの作成</b>
 表の上にあるCreatボタンからTitle、 To Do details、 Category、 Priority、 Deadlineを記入または選択し作成。
