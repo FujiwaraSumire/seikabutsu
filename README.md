@@ -60,6 +60,11 @@
 
 <br />
 
+<img width="700" alt="スクリーンショット 2024-03-25 18 48 49" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/c0981749-9c32-4372-9585-213dd05c38f1">
+
+
+<br />
+
 ## 使い方
 
 <a href="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d988033d-6555-4a5a-be25-8e2a32aaf35a">動画リンク</a>
