@@ -2,7 +2,7 @@
 ## アプリのURL
 
 
-<a href="https://to-do-rist-c67dabfc11d8.herokuapp.com/login">To Do リスト</a>
+<a href="https://to-do-rist-c67dabfc11d8.herokuapp.com/login">To Do リスト</a><br />
 
 <b>テストアカウント:</b>
 - Mail: smile01183170@gmail.com
@@ -44,9 +44,12 @@
 
 <b>ER図</b>
 <br>
+<br>
 <img width="700" alt="スクリーンショット 2024-03-25 19 37 35" src="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/8bbff497-95c1-4aab-9a89-1a3ce4b21fb8">
 <br>
+<br>
 <b>各テーブル詳細</b>
+<br>
 <br>
 |  posts table  |　categories table  |
 | ---- | ---- |
@@ -83,9 +86,8 @@
 <br />
 
 ## 使い方
-使い方動画<br />
 
-https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d988033d-6555-4a5a-be25-8e2a32aaf35a<br />
+<a href="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d988033d-6555-4a5a-be25-8e2a32aaf35a"><b>使い方動画</b></a><br />
 
 <b>・タスクの作成</b><br />
 表の上にあるCreatボタンからTitle、 To Do details、 Category、 Priority、 Deadlineを記入または選択し作成。
