@@ -62,7 +62,7 @@
 
 ## 使い方
 
-<a href="https://drive.google.com/file/d/1SWbfIIraCr22hxnPpahlvUo5PXRbbrKG/view?usp=sharing">動画リンク</a>
+<a href="https://github.com/FujiwaraSumire/seikabutsu/assets/154066077/d988033d-6555-4a5a-be25-8e2a32aaf35a">動画リンク</a>
 
 <b>・タスクの作成</b>
 表の上にあるCreatボタンからTitle、 To Do details、 Category、 Priority、 Deadlineを記入または選択し作成。
